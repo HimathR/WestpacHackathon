@@ -17,7 +17,10 @@ export const CoinExchange = () => {
         <h2 className="text-2xl font-semibold mb-6 text-body mt-6">
           Redeem your W Coins for
         </h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 ">
+        <motion.div
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          className="grid grid-cols-2 gap-4 md:grid-cols-4 "
+        >
           <div className="flex flex-col items-center text-center">
             <img
               src="/reward1.jpg"
@@ -70,7 +73,7 @@ export const CoinExchange = () => {
               Including oneworld, KrisFlyer, Velocity and Asia Miles.
             </p>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

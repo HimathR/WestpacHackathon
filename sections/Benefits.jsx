@@ -46,12 +46,12 @@ const Benefits = () => (
     >
       <TitleText title="Benefits" textStyles="text-center mb-8" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl mx-auto">
         {benefitsData.map((member) => (
           <motion.div
             key={member.name}
             variants={fadeIn("right", "tween", 0.2, 1)}
-            className="mx-auto max-w-lg lg:max-w-3xl bg-white border border-gray-200 rounded-sm shadow overflow-hidden"
+            className="mx-auto max-w-lg lg:max-w-xl bg-white border border-gray-200 rounded-sm shadow overflow-hidden"
           >
             <a href="#">
               <img
