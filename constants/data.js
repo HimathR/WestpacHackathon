@@ -23,7 +23,7 @@ export const mockAccounts = [
   {
     accountID: "ACC0010",
     accountTypeID: 2,
-    balance: 6500,
+    balance: SAVINGS_DATA.currentBalance,
   },
   {
     accountID: "ACC0015",
@@ -37,14 +37,14 @@ export const mockTransactions = [
     recordID: "TRX0100021",
     trxDate: "2023-02-22T00:00:00.000+00:00",
     trxDescription: "Ampol Petrol",
-    trxAmount: -4.66,
+    trxAmount: -24.66,
     accountID: "ACC0010",
   },
   {
     recordID: "TRX0100029",
     trxDate: "2023-02-22T00:00:00.000+00:00",
     trxDescription: "Coffee Shop",
-    trxAmount: -2.27,
+    trxAmount: -9.27,
     accountID: "ACC0010",
   },
   {
@@ -64,8 +64,8 @@ export const mockTransactions = [
   {
     recordID: "TRX0100021",
     trxDate: "2023-02-22T00:00:00.000+00:00",
-    trxDescription: "Ampol Petrol",
-    trxAmount: -4.66,
+    trxDescription: "Payment From Bob",
+    trxAmount: +4.66,
     accountID: "ACC0010",
   },
   {
@@ -96,11 +96,33 @@ export const mockTransactions = [
     trxAmount: -13.99,
     accountID: "ACC0010",
   },
+
   {
     recordID: "TRX0100043",
     trxDate: "2023-03-22T00:00:00.000+00:00",
     trxDescription: "Grocery Store",
     trxAmount: -95.27,
+    accountID: "ACC0010",
+  },
+  {
+    recordID: "TRX0100047",
+    trxDate: "2023-03-20T00:00:00.000+00:00",
+    trxDescription: "Avocado Toast",
+    trxAmount: -20.99,
+    accountID: "ACC0010",
+  },
+  {
+    recordID: "TRX0100021",
+    trxDate: "2023-03-20T00:00:00.000+00:00",
+    trxDescription: "Payment from Bucky",
+    trxAmount: +23.69,
+    accountID: "ACC0010",
+  },
+  {
+    recordID: "TRX0100022",
+    trxDate: "2023-03-20T00:00:00.000+00:00",
+    trxDescription: "Avocado Toast",
+    trxAmount: -20.99,
     accountID: "ACC0010",
   },
   {
@@ -124,6 +146,20 @@ export const mockTransactions = [
     trxAmount: -22.8,
     accountID: "ACC0010",
   },
+  {
+    recordID: "TRX0100047",
+    trxDate: "2023-03-20T00:00:00.000+00:00",
+    trxDescription: "Payslip",
+    trxAmount: +2431.99,
+    accountID: "ACC0010",
+  },
+  {
+    recordID: "TRX0100047",
+    trxDate: "2023-03-19T00:00:00.000+00:00",
+    trxDescription: "Avocado Toast",
+    trxAmount: -20.99,
+    accountID: "ACC0010",
+  },
 ];
 
 export const mockBuckysAdvice =
@@ -145,6 +181,7 @@ export const mockSavingsInfo = {
     },
   ],
   transactions: [mockTransactions],
+  SAVINGS_DATA,
   accountTypes: [
     {
       accountTypeID: 1,

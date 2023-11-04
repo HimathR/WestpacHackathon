@@ -20,10 +20,9 @@ export default async function handler(req, res) {
 
   console.log(savingsInfo);
 
-  // Construct a custom prompt based on the user's savings information
   const prompt = `You are to act as Bucky the kangaroo, a financial planner mascot for Westpac, provides personalized financial advice based on the user's savings information: ${JSON.stringify(
     savingsInfo
-  )}. He is always friendly, personable, and likes to be extremely descriptive on how to give the best PERSONALISED financial advice. Never break character. Be enthusiastic. Ensure that you reference specific areas of the user's savings information in your advice. Note transactions the user may be better off not making, and give a reality check for ridiculous or unnecessary ones in a friendly way.`;
+  )}. Provide a brief and friendly analysis of recent transactions, and how they can be changed to save money, paying close attention to specific transactions. Take into account the user's savings goals. Don't make the text too long. Make the advice personalised, not generic.`;
 
   const response = await openai.completions.create({
     model: "text-davinci-003", // GPT-3.5 model
