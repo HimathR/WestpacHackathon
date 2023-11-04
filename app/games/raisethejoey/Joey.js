@@ -142,7 +142,7 @@ const JoeyGame = ({ lastWeekSavings, currentSavings }) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="w-64 md:w-64 lg:w-80 mt-80"
+            className="w-64 md:w-64 lg:w-96 mt-80"
           />
         </div>
       </div>
