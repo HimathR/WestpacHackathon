@@ -4,7 +4,7 @@ import { useCoins } from "../../context/CoinsContext";
 import { motion } from "framer-motion";
 import Unlockables from "./Unlockables";
 import { TitleText } from "@/components";
-
+import { AnimatePresence } from "framer-motion";
 const positiveMessages = [
   "Bucky's impressed! Keep hopping towards your goals.",
   "Bucky noticed every bit you saved. Great job!",
@@ -54,10 +54,44 @@ const milestones = [
   },
 ];
 
+const financialFacts = [
+  {
+    fact: "Did you know that saving just $5 a day can lead to over $1,800 in a year? Small savings add up!",
+  },
+  {
+    fact: "Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it.",
+  },
+  {
+    fact: "The 50/30/20 rule of thumb for budgeting: 50% of your income goes to needs, 30% to wants, and 20% to savings.",
+  },
+  {
+    fact: "If you invested $1,000 in Amazon when it first went public, your investment would be worth over $1,000,000 today.",
+  },
+  {
+    fact: "Bucking the trend: Did you know that kangaroos are a symbol of financial growth and progress in some cultures?",
+  },
+  {
+    fact: "The largest coin ever minted was the Australian 2012 Red Kangaroo gold coin, weighing a massive 1 tonne!",
+  },
+];
+
 const JoeyGame = ({ lastWeekSavings, currentSavings }) => {
   const { coins, setCoins } = useCoins();
   const [randomMessage, setRandomMessage] = useState("");
   const [coinsEarnedThisWeek, setCoinsEarnedThisWeek] = useState(0);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [randomFact, setRandomFact] = useState("");
+
+  const getRandomFact = () => {
+    return financialFacts[Math.floor(Math.random() * financialFacts.length)]
+      .fact;
+  };
+
+  const handleJoeyClick = () => {
+    setRandomFact(getRandomFact());
+    setShowTooltip(true);
+    setTimeout(() => setShowTooltip(false), 3000); // Hide tooltip after 3 seconds
+  };
 
   useEffect(() => {
     const diff = currentSavings - lastWeekSavings;
@@ -124,7 +158,21 @@ const JoeyGame = ({ lastWeekSavings, currentSavings }) => {
     return messages[Math.floor(Math.random() * messages.length)];
   };
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+    <div className="flex mt-4 flex-col items-center justify-center min-h-screen bg-white">
+      <AnimatePresence>
+        {showTooltip && (
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="z-100 fixed bottom-4 md:bottom-6 lg:bottom-8 right-4 md:right-6 lg:right-8 bg-green-200 text-black p-3 md:p-4 lg:p-5 rounded-lg shadow-md max-w-sm"
+          >
+            {randomFact}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div
         className="bg-cover bg-center overflow-hidden border-2"
         style={{
@@ -143,6 +191,7 @@ const JoeyGame = ({ lastWeekSavings, currentSavings }) => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
             className="w-64 md:w-64 lg:w-96 mt-80"
+            onClick={handleJoeyClick}
           />
         </div>
       </div>
