@@ -145,7 +145,7 @@ const Navbar = () => {
     if (router.pathname === path) {
       return "text-body outline-none focus:outline-none py-2 px-4 border-b-2 border-westpac-red";
     }
-    return "text-body outline-none focus:outline-none py-2 px-4 hover:border-b-2 hover:border-westpac-red";
+    return "text-body outline-none focus:outline-none py-2 px-4 hover:border-b-4 hover:border-westpac-red";
   };
 
   const buttonClasses =
