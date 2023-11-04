@@ -90,7 +90,7 @@ const JoeyGame = ({ lastWeekSavings, currentSavings }) => {
   const handleJoeyClick = () => {
     setRandomFact(getRandomFact());
     setShowTooltip(true);
-    setTimeout(() => setShowTooltip(false), 3000); // Hide tooltip after 3 seconds
+    setTimeout(() => setShowTooltip(false), 10000); // Hide tooltip after 3 seconds
   };
 
   useEffect(() => {
