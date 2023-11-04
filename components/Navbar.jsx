@@ -75,9 +75,18 @@ const LoginForm = ({ onLogin }) => {
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col lg:flex-row bg-white rounded-lg p-8 max-w-3xl w-full"
+      className="flex flex-col lg:flex-row rounded-lg overflow-hidden max-w-5xl w-full mx-auto"
     >
-      <div className="flex-1 p-4">
+      {/* Mobile image */}
+      <div className="lg:hidden w-full bg-gray-200 p-8 flex justify-center items-center">
+        <img
+          src="/logincover2.png"
+          alt="Login Visual"
+          className="w-7/8 h-auto"
+        />
+      </div>
+
+      <div className="flex-1 p-8 bg-white">
         <h2 className="text-2xl font-bold mb-4 text-center md:text-left">
           Sign In To Westpac RooRewards
         </h2>
@@ -105,13 +114,21 @@ const LoginForm = ({ onLogin }) => {
           </button>
         </form>
       </div>
+
+      {/* Desktop image */}
       <div
-        className="w-full h-64 lg:h-auto lg:flex-1 bg-contain bg-no-repeat bg-center "
-        style={{ backgroundImage: 'url("/logincover.png")' }}
+        className="hidden lg:block lg:flex-1 bg-gray-200 p-8"
+        style={{
+          backgroundImage: 'url("/logincover2.png")',
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       ></div>
     </motion.div>
   );
 };
+
 const Navbar = () => {
   const router = useRouter();
   const { coins } = useCoins();
