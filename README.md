@@ -1,34 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Welcome To Westpac RooRewards
 
-## Getting Started
+This is my entry for the Westpac Bank of The Future Hackathon. 
 
-First, run the development server:
+Idea:  The Westpac RooRewards platform offers a gamified savings experience, incorporating interactive games and a GPT-Powered AI persona named Bucky for a fun, hyper-personalized approach to financial management. With features like "RooLotto," where savings translate into lottery tickets, and "Raise Bucky," a game that promotes consistent saving by nurturing a digital pet, the platform aims to incentivize saving through enjoyment and habit formation. Bucky, inspired by the motivational Duolingo mascot, provides AI-driven financial advice, making the process of managing and saving money less daunting and more engaging. By rewarding users with in-app currency called “W coins”, and integrating with Westpac's current reward systems, the app seeks to foster user loyalty and transform saving from a mundane task into a rewarding experience. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Currently Deployed At: https://westpac.himathsprojects.xyz/ (please check it out for the full experience!!)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Youtube Video Link: https://www.youtube.com/watch?v=avL95B2hWjE 
