@@ -1,4 +1,5 @@
 ## Welcome To Westpac RooRewards
+![image](https://github.com/HimathR/WestpacHackathon/assets/59962329/9d7d2abf-9a35-410f-b3cf-7e959b49efd5)
 
 This is my entry for the Westpac Bank of The Future Hackathon. 
 
@@ -7,3 +8,5 @@ Idea:  The Westpac RooRewards platform offers a gamified savings experience, inc
 Currently Deployed At: https://westpac.himathsprojects.xyz/ (please check it out for the full experience!!)
 
 Youtube Video Link: https://www.youtube.com/watch?v=avL95B2hWjE 
+
+
